@@ -10,7 +10,6 @@ How do sequence length and GC content differ among 16S rRNA gene sequences from 
 
 ## What the Program Does
 
-- downloads verified 16S rRNA records from NCBI RefSeq
 - reads multiple sequences from one FASTA file
 - counts how many sequences are present
 - calculates the length of each sequence
@@ -32,7 +31,6 @@ The exact strains, accession numbers, and sequence status are listed in `accessi
 
 ```text
 bioinformatics-project-01-fasta-explorer/
-├── download_sequences.py
 ├── fasta_explorer.py
 ├── bacterial_16s_sequences.fasta
 ├── accession_sources.csv
@@ -46,32 +44,20 @@ bioinformatics-project-01-fasta-explorer/
 
 ## Data Source
 
-The sequence records come from NCBI RefSeq. The project uses these verified accessions:
+The sequence records come from NCBI RefSeq and are already included in `bacterial_16s_sequences.fasta`.
 
 | Species | Accession | Record type |
 |---|---|---|
 | *Escherichia coli* | NR_024570.1 | Partial 16S rRNA |
 | *Bacillus subtilis* | NR_112116.2 | Complete 16S rRNA |
 | *Staphylococcus aureus* | NR_037007.2 | Complete 16S rRNA |
-| *Pseudomonas aeruginosa* | NR_117678.1 | Partial 16S rRNA |
+| *Pseudomonas aeruginosa* | NR_026078.1 | Complete 16S rRNA |
 
-Because two records are partial and two are complete, sequence-length differences should be interpreted partly as differences in record coverage, not only as biological differences.
+Because the *E. coli* record is partial while the other three records are complete, sequence-length differences should be interpreted partly as differences in record coverage.
 
 ## How to Run
 
-First download the real sequence data:
-
-```bash
-python download_sequences.py
-```
-
-This creates:
-
-```text
-bacterial_16s_sequences.fasta
-```
-
-Then run the analysis:
+Run the analysis directly:
 
 ```bash
 python fasta_explorer.py
@@ -93,10 +79,10 @@ fasta_summary.csv
 
 - Project structure created
 - Multi-FASTA analysis code added
-- Verified NCBI accessions documented
-- Real-data download script added
+- Real FASTA dataset included directly in the repository
+- Verified accession numbers documented
 - Local testing and screenshots pending
 
 ## Next Step
 
-Run both scripts locally, review the generated CSV file, and add the real output and screenshot to this README.
+Run `fasta_explorer.py`, review the generated CSV file, and add the real terminal output and screenshot to this README.
