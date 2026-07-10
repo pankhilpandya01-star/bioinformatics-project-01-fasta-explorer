@@ -8,20 +8,31 @@ The project builds on BioSeq Toolkit by moving from one DNA sequence to a FASTA 
 
 How do sequence length and GC content differ among 16S rRNA gene sequences from different bacterial species?
 
-## What the Program Will Do
+## What the Program Does
 
-- read multiple sequences from one FASTA file
-- count how many sequences are present
-- calculate the length of each sequence
-- calculate GC content for each sequence
-- identify the longest and shortest sequences
-- identify the highest and lowest GC content
-- save the summary as a CSV file
+- downloads verified 16S rRNA records from NCBI RefSeq
+- reads multiple sequences from one FASTA file
+- counts how many sequences are present
+- calculates the length of each sequence
+- calculates GC content for each sequence
+- identifies the longest and shortest sequences
+- identifies the highest and lowest GC content
+- saves the summary as a CSV file
 
-## Planned Files
+## Species Included
+
+- *Escherichia coli*
+- *Bacillus subtilis*
+- *Staphylococcus aureus*
+- *Pseudomonas aeruginosa*
+
+The exact strains, accession numbers, and sequence status are listed in `accession_sources.csv`.
+
+## Project Files
 
 ```text
 bioinformatics-project-01-fasta-explorer/
+├── download_sequences.py
 ├── fasta_explorer.py
 ├── bacterial_16s_sequences.fasta
 ├── accession_sources.csv
@@ -35,17 +46,57 @@ bioinformatics-project-01-fasta-explorer/
 
 ## Data Source
 
-The final dataset will contain verified bacterial 16S rRNA records from a public nucleotide database. Each FASTA header will include the organism name and accession number so the data can be traced back to its source.
+The sequence records come from NCBI RefSeq. The project uses these verified accessions:
 
-The accession list and downloaded sequences will be added only after every record has been checked to confirm that it represents the intended 16S rRNA sequence.
+| Species | Accession | Record type |
+|---|---|---|
+| *Escherichia coli* | NR_024570.1 | Partial 16S rRNA |
+| *Bacillus subtilis* | NR_112116.2 | Complete 16S rRNA |
+| *Staphylococcus aureus* | NR_037007.2 | Complete 16S rRNA |
+| *Pseudomonas aeruginosa* | NR_117678.1 | Partial 16S rRNA |
+
+Because two records are partial and two are complete, sequence-length differences should be interpreted partly as differences in record coverage, not only as biological differences.
+
+## How to Run
+
+First download the real sequence data:
+
+```bash
+python download_sequences.py
+```
+
+This creates:
+
+```text
+bacterial_16s_sequences.fasta
+```
+
+Then run the analysis:
+
+```bash
+python fasta_explorer.py
+```
+
+When asked for the file name, enter:
+
+```text
+bacterial_16s_sequences.fasta
+```
+
+The program will also create:
+
+```text
+fasta_summary.csv
+```
 
 ## Current Status
 
 - Project structure created
 - Multi-FASTA analysis code added
-- Public sequence records being verified
-- Local testing and screenshots still pending
+- Verified NCBI accessions documented
+- Real-data download script added
+- Local testing and screenshots pending
 
 ## Next Step
 
-After the real multi-FASTA dataset is added, the program will be run locally and the real output will be added to this README.
+Run both scripts locally, review the generated CSV file, and add the real output and screenshot to this README.
