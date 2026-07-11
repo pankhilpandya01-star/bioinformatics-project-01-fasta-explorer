@@ -6,7 +6,7 @@ The project builds on BioSeq Toolkit by moving from one DNA sequence to a FASTA 
 
 ## Project Question
 
-How do sequence length and GC content differ among 16S rRNA gene sequences from different bacterial species?
+How do sequence length and GC content differ among complete 16S rRNA sequences from different bacterial species?
 
 ## What the Program Does
 
@@ -16,6 +16,7 @@ How do sequence length and GC content differ among 16S rRNA gene sequences from 
 - calculates GC content for each sequence
 - identifies the longest and shortest sequences
 - identifies the highest and lowest GC content
+- calculates the average GC content across all sequences
 - saves the summary as a CSV file
 
 ## Species Included
@@ -25,7 +26,7 @@ How do sequence length and GC content differ among 16S rRNA gene sequences from 
 - *Staphylococcus aureus*
 - *Pseudomonas aeruginosa*
 
-The exact strains, accession numbers, and sequence status are listed in `accession_sources.csv`.
+The accession numbers and sequence details are listed in `accession_sources.csv`.
 
 ## Project Files
 
@@ -44,16 +45,16 @@ bioinformatics-project-01-fasta-explorer/
 
 ## Data Source
 
-The sequence records come from NCBI RefSeq and are already included in `bacterial_16s_sequences.fasta`.
+The four complete 16S rRNA records are already included in `bacterial_16s_sequences.fasta`.
 
-| Species | Accession | Record type |
-|---|---|---|
-| *Escherichia coli* | NR_024570.1 | Partial 16S rRNA |
-| *Bacillus subtilis* | NR_112116.2 | Complete 16S rRNA |
-| *Staphylococcus aureus* | NR_037007.2 | Complete 16S rRNA |
-| *Pseudomonas aeruginosa* | NR_026078.1 | Complete 16S rRNA |
+| Species | Accession | Record type | Database |
+|---|---|---|---|
+| *Escherichia coli* | J01859.1 | Complete 16S rRNA | NCBI GenBank |
+| *Bacillus subtilis* | NR_112116.2 | Complete 16S rRNA | NCBI RefSeq |
+| *Staphylococcus aureus* | NR_037007.2 | Complete 16S rRNA | NCBI RefSeq |
+| *Pseudomonas aeruginosa* | NR_026078.1 | Complete 16S rRNA | NCBI RefSeq |
 
-Because the *E. coli* record is partial while the other three records are complete, sequence-length differences should be interpreted partly as differences in record coverage.
+Using complete records makes the sequence-length comparison more meaningful than comparing a mixture of partial and complete records.
 
 ## How to Run
 
@@ -79,8 +80,9 @@ fasta_summary.csv
 
 - Project structure created
 - Multi-FASTA analysis code added
-- Real FASTA dataset included directly in the repository
-- Verified accession numbers documented
+- Four complete real 16S rRNA records included
+- Average GC content calculation added
+- Accession numbers documented
 - Local testing and screenshots pending
 
 ## Next Step
