@@ -37,6 +37,7 @@ bioinformatics-project-01-fasta-explorer/
 ├── accession_sources.csv
 ├── fasta_summary.csv
 ├── images/
+│   └── project_output.png
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
@@ -97,7 +98,7 @@ The program successfully analyzed four sequences.
 
 ## Program Output Screenshot
 
-A terminal screenshot will be added here after it is uploaded to the `images` folder.
+![FASTA Explorer Output](images/project_output.png)
 
 ## What I Learned
 
@@ -119,4 +120,4 @@ This project helped me practice:
 - Accession numbers documented
 - Program tested successfully
 - CSV output generated
-- Screenshot upload pending
+- Screenshot added
