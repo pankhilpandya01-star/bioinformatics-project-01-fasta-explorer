@@ -76,6 +76,40 @@ The program will also create:
 fasta_summary.csv
 ```
 
+## Tested Results
+
+The program successfully analyzed four sequences.
+
+| Species | Length | GC content |
+|---|---:|---:|
+| *Escherichia coli* | 1541 bp | 54.45% |
+| *Bacillus subtilis* | 1550 bp | 55.10% |
+| *Staphylococcus aureus* | 1552 bp | 51.10% |
+| *Pseudomonas aeruginosa* | 1537 bp | 54.07% |
+
+### Comparison Summary
+
+- Longest sequence: *Staphylococcus aureus* at 1552 bp
+- Shortest sequence: *Pseudomonas aeruginosa* at 1537 bp
+- Highest GC content: *Bacillus subtilis* at 55.10%
+- Lowest GC content: *Staphylococcus aureus* at 51.10%
+- Average GC content: 53.68%
+
+## Program Output Screenshot
+
+A terminal screenshot will be added here after it is uploaded to the `images` folder.
+
+## What I Learned
+
+This project helped me practice:
+
+- reading and separating multiple FASTA records
+- storing multiple biological sequences in a Python dictionary
+- comparing sequence length and GC content across species
+- calculating a dataset average
+- exporting analysis results to CSV
+- documenting public biological data with accession numbers
+
 ## Current Status
 
 - Project structure created
@@ -83,8 +117,6 @@ fasta_summary.csv
 - Four complete real 16S rRNA records included
 - Average GC content calculation added
 - Accession numbers documented
-- Local testing and screenshots pending
-
-## Next Step
-
-Run `fasta_explorer.py`, review the generated CSV file, and add the real terminal output and screenshot to this README.
+- Program tested successfully
+- CSV output generated
+- Screenshot upload pending
