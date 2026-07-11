@@ -85,12 +85,19 @@ try:
         highest_gc = max(results, key=lambda row: row[2])
         lowest_gc = min(results, key=lambda row: row[2])
 
+        total_gc = 0
+        for result in results:
+            total_gc = total_gc + result[2]
+
+        average_gc = round(total_gc / len(results), 2)
+
         print("Comparison Results")
         print("------------------")
         print("Longest sequence:", longest[0], "(" + str(longest[1]) + " bp)")
         print("Shortest sequence:", shortest[0], "(" + str(shortest[1]) + " bp)")
         print("Highest GC content:", highest_gc[0], "(" + str(highest_gc[2]) + "%)")
         print("Lowest GC content:", lowest_gc[0], "(" + str(lowest_gc[2]) + "%)")
+        print("Average GC content:", str(average_gc) + "%")
         print()
 
         output_file = "fasta_summary.csv"
