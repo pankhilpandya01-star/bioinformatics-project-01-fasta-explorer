@@ -1,5 +1,5 @@
 # FASTA Explorer
-# Project 2: Analyze multiple DNA sequences from one FASTA file
+# Project 1: Analyze multiple DNA sequences from one FASTA file
 
 # The csv module is used to save the final results in a spreadsheet-friendly file.
 import csv
