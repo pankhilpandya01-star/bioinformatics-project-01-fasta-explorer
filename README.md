@@ -50,10 +50,10 @@ The four complete 16S rRNA records are already included in `bacterial_16s_sequen
 
 | Species | Accession | Record type | Database |
 |---|---|---|---|
-| *Escherichia coli* | J01859.1 | Complete 16S rRNA | NCBI GenBank |
-| *Bacillus subtilis* | NR_112116.2 | Complete 16S rRNA | NCBI RefSeq |
-| *Staphylococcus aureus* | NR_037007.2 | Complete 16S rRNA | NCBI RefSeq |
-| *Pseudomonas aeruginosa* | NR_026078.1 | Complete 16S rRNA | NCBI RefSeq |
+| *Escherichia coli* | [J01859.1](https://www.ncbi.nlm.nih.gov/nuccore/J01859.1) | Complete 16S rRNA | NCBI GenBank |
+| *Bacillus subtilis* | [NR_112116.2](https://www.ncbi.nlm.nih.gov/nuccore/NR_112116.2) | Complete 16S rRNA | NCBI RefSeq |
+| *Staphylococcus aureus* | [NR_037007.2](https://www.ncbi.nlm.nih.gov/nuccore/NR_037007.2) | Complete 16S rRNA | NCBI RefSeq |
+| *Pseudomonas aeruginosa* | [NR_026078.1](https://www.ncbi.nlm.nih.gov/nuccore/NR_026078.1) | Complete 16S rRNA | NCBI RefSeq |
 
 Using complete records makes the sequence-length comparison more meaningful than comparing a mixture of partial and complete records.
 
@@ -111,13 +111,18 @@ This project helped me practice:
 - exporting analysis results to CSV
 - documenting public biological data with accession numbers
 
-## Current Status
+## Limitations
 
-- Project structure created
-- Multi-FASTA analysis code added
-- Four complete real 16S rRNA records included
-- Average GC content calculation added
-- Accession numbers documented
-- Program tested successfully
-- CSV output generated
-- Screenshot added
+- The dataset contains only four bacterial 16S rRNA records.
+- Length and GC content are descriptive properties and do not establish evolutionary relationships.
+- The project does not perform sequence alignment, taxonomic classification, or phylogenetic analysis.
+
+## Portfolio Progression
+
+Previous project: [BioSeq Toolkit](https://github.com/pankhilpandya01-star/bioinformatics-project-00-seqtool)
+
+Next project: [NCBI Sequence Fetcher](https://github.com/pankhilpandya01-star/bioinformatics-project-02-ncbi-sequence-fetcher)
+
+## License
+
+This project is available under the MIT License.
